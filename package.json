@@ -4,12 +4,18 @@
   "description": "a web to create wechat screenshot",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "rmdir /S /Q dist && mkdir dist"
+    "test": "echo \"ok this is only a test\" && exit 1",
+    "clean": "rmdir /S /Q dist && mkdir dist",
+    "copy": "xcopy /E /H /EXCLUDE:.exclude src dist",
+    "sass": "sass --update src/sass:dist/css",
+    "sass:watch": "start sass --watch src/sass:dist/css",
+    "prestart": "cnpm run clean && cnpm run copy && cnpm run sass",
+    "start": "start node server.js & start http://127.0.0.1:80"
   },
   "author": "jingks",
   "license": "ISC",
   "dependencies": {
+    "cnpm": "^6.1.1",
     "express": "^4.17.1"
   }
 }
