@@ -1,0 +1,15 @@
+{
+  "name": "screenshot-creater",
+  "version": "1.0.0",
+  "description": "a web to create wechat screenshot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rmdir /S /Q dist && mkdir dist"
+  },
+  "author": "jingks",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
