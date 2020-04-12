@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        
+        <title>微信截图伪造ver1.0.0</title>
+        
+        <link rel="stylesheet" href="css/main.css" />
+    </head>
+    <body>
+
+        <div class="box">
+            <div class="box-left">
+                <div class="pre-box">
+                    <div class="editor-box">
+                        <div value="1" class="select-item color1">单行文本</div>
+                        <div value="2" class="select-item color2">多行文本</div>
+                        <div value="4" class="select-item color3">单图片</div>
+                        <div value="8" class="select-item color4">多图片</div>
+                        <div value="16" class="select-item color5">图文</div>
+                    </div>
+                    <div class="button">确认</div>
+                </div>
+                <div class="after-box  hidden">
+                    <div class="box-item text">
+                        <div class="text-title">文本：</div>
+                        <textarea class="text-content" placeholder="请输入文本"></textarea>
+                    </div>
+
+                    <div class="box-item single-pic">
+                        <div class="text-title">请选择单图路径：</div>
+                        <input class="single-pic-content" type="file" />
+                    </div>
+
+                    <div class="box-item many-pic">
+                        <div class="text-title">请选择多图路径：</div>
+                        <div class="many-pic-box" val="1">
+                            <input class="many-pic-content" type="file" />
+                            <button class="del">-</button>
+                        </div>
+                        <div class="many-pic-box" val="2">
+                            <input class="many-pic-content" type="file" />
+                            <button class="del">-</button>
+                        </div>
+                        <button class="add">+</button>
+                    </div>
+
+                    <div class="box-item pic-content">
+                        <div class="text-title">请完善图文信息：</div>
+                        <input class="pic" type="file" />
+                        <input class="content" type="text" placeholder="请输入文本" />
+                    </div>
+
+                    <div class="button-wrapper">
+                        <div class="button-group">
+                            <div class="back">返回</div>
+                            <div class="go">生成</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-right screen" id="screen">
+                <div class="wechat-top" id="background">
+                    <div class="bar">
+                        <img class="icon icon-left" src="img/icon/signal.svg"/>
+                        <img class="icon icon-left" src="img/icon/signal2.svg"/>
+                        <img class="icon icon-right" src="img/icon/battery.svg"/>
+                        <img class="icon icon-right" src="img/icon/blue.svg"/>
+                        <img class="icon icon-right" src="img/icon/alarm.svg"/>
+                        <div class="icon-center time">12:22</div>
+                    </div>
+                    <div class="button">
+                        <img class="back" src="img/icon/left.svg" />
+                        <img class="camera" src="img/icon/camera.svg" />
+                    </div>
+                    <div class="user">
+                        <img class="logo" id="logo" src="img/head/1.jpg" onerror="javascript:this.src='img/head/default.jpg'" />
+                        <div class="name" id="name">进击的路人乙</div>
+                    </div>
+                </div>
+
+                <div class="wechat-content">
+
+                    <div class="article article1">
+                        <div class="article-left">
+                            <img class="logo" id="logo1" src="img/head/1.jpg" onerror="javascript:this.src='img/head/default.jpg'" />
+                        </div>
+                        <div class="article-right">
+                            <div class="name" id="name1">进击的路人乙</div>
+                            <div class="short-text">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="long-text hidden">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="pic-content hidden">
+                                <img class="pic" src="../img/head/1.jpg" />
+                                <div class="content">这是一段content</div>
+                            </div>
+                            <div class="one-pic hidden">
+                                <img src="../img/source/3.jpg" />
+                            </div>
+                            <div class="many-pic">
+                                <div class="pics mp1" style="background-image: url('../img/source/3.jpg');"></div>
+                                <div class="pics mp2" style="background-image: url('../img/source/1.jpg');"></div>
+                            </div>
+                            
+                            <div class="bar">
+                                <div class="time">1分钟前</div>
+                                <div class="like">··</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article article2">
+                        <div class="article-left">
+                            <img class="logo" id="logo2" src="img/head/1.jpg" onerror="javascript:this.src='img/head/default.jpg'" />
+                        </div>
+                        <div class="article-right">
+                            <div class="name" id="name2">进击的路人乙</div>
+                            <div class="short-text hidden">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="long-text">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="pic-content">
+                                <img class="pic" src="../img/head/1.jpg" />
+                                <div class="content">精神力大家拉萨酱豆腐拉萨酱豆腐拉萨解放手动阀手动阀手动阀手动阀沙发沙发</div>
+                            </div>
+                            <div class="one-pic hidden">
+                                <img src="../img/source/3.jpg" />
+                            </div>
+                            <div class="many-pic hidden">
+                                <div class="pics mp1" style="background-image: url('../img/source/3.jpg');"></div>
+                                <div class="pics mp2" style="background-image: url('../img/source/1.jpg');"></div>
+                            </div>
+                            
+                            <div class="bar">
+                                <div class="time">2分钟前</div>
+                                <div class="like">··</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="article article3">
+                        <div class="article-left">
+                            <img class="logo" id="logo3" src="img/head/1.jpg" onerror="javascript:this.src='img/head/default.jpg'" />
+                        </div>
+                        <div class="article-right">
+                            <div class="name" id="name3">进击的路人乙</div>
+                            <div class="short-text">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="long-text hidden">进击的路人进击的路人乙进击的路人乙进击的路人乙进击的路人乙进击的路人乙乙</div>
+                            <div class="pic-content hidden">
+                                <img class="pic" src="../img/head/1.jpg" />
+                                <div class="content">这是一段content</div>
+                            </div>
+                            <div class="one-pic hidden">
+                                <img src="../img/source/3.jpg" />
+                            </div>
+                            <div class="many-pic">
+                                <div class="pics mp1" style="background-image: url('../img/source/3.jpg');"></div>
+                                <div class="pics mp2" style="background-image: url('../img/source/1.jpg');"></div>
+                            </div>
+                            
+                            <div class="bar">
+                                <div class="time">2分钟前</div>
+                                <div class="like">··</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="msg-box">单行文本不能和多行文本一起选择</div>
+        <div class="screen-shot-container" id="screen-box">
+            <a href="" download=""></a>
+        </div>
+        <script src="js/html2canvas.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

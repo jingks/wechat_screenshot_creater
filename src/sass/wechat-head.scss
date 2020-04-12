@@ -1,0 +1,74 @@
+
+
+.screen {
+    overflow: hidden;
+    //wechat-top-box
+    .wechat-top {
+        height: $sh / 7 * 3;
+        background: url('../img/background/1.jpg');
+        position: relative;
+        opacity: 0.95;
+        //phone-head
+        .bar {
+            padding: 0 17px;
+            overflow: hidden;
+            padding-top: 2px;
+            .icon {
+                width: $icon-size;
+                height: $icon-size;
+                margin: 0 2px;
+            }
+            .icon-left {
+                float: left;
+            }
+            .icon-right {
+                float: right;
+            }
+            .icon-center {
+                margin-left: $sw / 2.5;
+            }
+            .time {
+                color: #fff;
+                font-size: $font-size * 0.7;
+            }
+        }
+
+        //wechat-top-button
+        .button {
+            margin-top: 10px;
+            img {
+                width: $icon-size * 1.4;
+                height: $icon-size * 1.4;
+            }
+            .back {
+                float: left;
+                margin-left: 8px;
+            }
+            .camera {
+                float: right;
+                margin-right: 8px;
+            }
+        }
+
+        //wechat-user-info
+        .user {
+            position: absolute;
+            bottom: -18px;
+            right: 0;
+            padding-right: 14px;
+            .name {
+                color: #fff;
+                font-size: $font-size;
+                float: right;
+                margin: 15px 15px 0 0;
+                text-shadow: 0 0 0.5px #fff;
+            }
+            .logo {
+                width: $icon-size * 4;
+                height: $icon-size * 4;
+                border-radius: 4px;
+                float: right;
+            }
+        }
+    }
+}

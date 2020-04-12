@@ -1,0 +1,120 @@
+
+.screen {
+    //wechat-body-box
+    .wechat-content {
+        margin-top: 40px;
+        .article {
+            border-bottom: $border;
+            margin-top: 10px;
+            overflow: hidden;
+            .article-left {
+                float: left;
+                height: 100%;
+                .logo {
+                    border-radius: 4px;
+                    width: $icon-size * 2.4;
+                    height: $icon-size * 2.4;
+                    padding: 0 10px;
+                }
+            }
+            .article-right {
+                float: left;
+                //user-name
+                .name {
+                    color: #556381;
+                    font-size: $font-size * 1;
+                    margin-top: 3px;
+                }
+                
+                //long text
+                .long-text, .short-text {
+                    width: $sw * 0.74;
+                    margin-top: 6px;
+                }
+
+                //short text
+                .short-text {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    background: #eee;
+                }
+
+                //pic-content
+                .pic-content {
+                    width: $sw * 0.78;
+                    background: #eee;
+                    margin-top: 6px;
+                    overflow: hidden;
+                    .pic {
+                        width: $icon-size * 2.4;
+                        height: $icon-size * 2.4;
+                        float: left;
+                        margin: 4px;
+                    }
+                    .content {
+                        font-size: $font-size * 0.9;
+                        width: $sw * 0.6;
+                        float: left;
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
+                        overflow: hidden;
+                        margin: 4px 0;
+                        transform: scale(0.95);
+                    }
+                }
+
+                //one-pic
+                .one-pic {
+                    margin-top: 8px;
+                    img {
+                        max-width: $sw * 0.5;
+                        max-height: $sh * 0.3;
+                    }
+                }
+
+                //more-pic
+                .many-pic {
+                    margin: 8px 0;
+                    width: $sw * 0.78;
+                    overflow: hidden;
+                    .pics {
+                        float: left;
+                        background-position: center;
+                        background-size: cover;
+                        width: $sw * 0.2;
+                        height: $sw * 0.2;
+                        margin:0 8px 8px 0;
+                    }
+                }
+                //bar
+                .bar {
+                    width: $sw * 0.78;
+                    margin: 8px 0;
+                    .time, .like {
+                        display: inline-block;
+                    }
+                    .time {
+                        font-size: $font-size;
+                        transform: scale(0.9);
+                        color: #777;
+                    }
+                    .like {
+                        background:#eee;
+                        width: $sw * 0.07;
+                        height: $sw * 0.05;
+                        line-height: $sw * 0.05;
+                        color: #556381;
+                        border-radius: 3px;
+                        text-align: center;
+                        vertical-align: middle;
+                        font-size: $font-size * 2;
+                        float: right;
+                    }
+                }
+            }
+        }
+
+    }
+}

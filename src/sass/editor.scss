@@ -1,0 +1,127 @@
+.box-left {
+    position: relative;
+    font-size: $font-size * 1.3;
+
+    //pre-box
+    .pre-box {
+        user-select: none;
+        .editor-box{
+            height: $sh * 0.9;
+            display: flex;
+            flex-flow: row wrap;
+            text-align: center;
+            .select-item {
+                margin:0 auto;
+                align-self: center;
+                width: $sw * 0.4;
+                height: $sw * 0.4;
+                line-height: $sw * 0.4;
+                color: #fff;
+                border-radius: 10px;
+                box-shadow: 2px 2px 4px black;
+            }
+            .selected {
+                box-shadow: -2px -2px 4px black;
+            }
+            .color1 {
+                background: #FE4365;
+            }
+            .color2 {
+                background: #83AF9B;
+            }
+            .color3 {
+                background: #DF9D53;
+            }
+            .color4 {
+                background: #8b218b;
+            }
+            .color5 {
+                background: #823835;
+            }
+        }
+        .button {
+            height: $sh * 0.1;
+            line-height: $sh * 0.1;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            background: #24211C;
+            color: #fff;
+        }
+        .button:hover {
+            background: #383634;
+        }
+        .button:active {
+            background: #000;
+        }
+    }
+    
+
+    //after-box
+    .after-box {
+        .box-item {
+            margin-left: 10px;
+            padding: 10px;
+            width: 80%;
+            .text-title {
+                margin: 10px 0;
+            }
+            .text-content {
+                width: 100%;
+                height: $sh * 0.15;
+                resize: none;
+            }
+            .many-pic-box {
+                .many-pic-content, .del {
+                    display: inline-block;
+                }
+                .many-pic-content {
+                    width: 70%;
+                }
+                .del{
+                    width: 15%;
+                    border-radius: 2px;
+                }
+            }
+            .add {
+                width: 15%;
+                border-radius: 2px;
+            }
+            .content {
+                height: $sh * 0.04;
+                margin-top: 10px;
+            }
+        }
+
+        //btn-group
+        .button-wrapper {
+            position: absolute;
+            bottom: 0;
+            width:100%;
+            .button-group {
+                .back, .go {
+                    text-align: center;
+                    border: $border;
+                    height: $sh * 0.06;
+                    line-height: $sh * 0.06;
+                    color: #fff;
+                    user-select: none;
+                }
+                .back {
+                    background: #83AF9B;
+                }
+                .back:active {
+                    background: #598f77;
+                }
+                .go {
+                    background: #FE4365;
+                }
+                .go:active {
+                    background: #f81d45;
+                }
+            }
+        }
+        
+    }
+}

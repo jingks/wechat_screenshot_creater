@@ -3,7 +3,7 @@ const path = require('path');
 
 const app = express();
 const port = 80;
-const public = 'dist';
+const public = 'src';
 
 app.use(express.static(path.join(__dirname, public)));
 

@@ -7,10 +7,9 @@
     "test": "echo \"ok this is only a test\" && exit 1",
     "clean": "rmdir /S /Q dist && mkdir dist",
     "copy": "xcopy /E /H /EXCLUDE:.exclude src dist",
-    "sass": "sass --update src/sass:dist/css",
-    "sass:watch": "start sass --watch src/sass:dist/css",
-    "prestart": "cnpm run clean && cnpm run copy && cnpm run sass",
-    "start": "start node server.js & start http://127.0.0.1:80"
+    "sass": "sass --update src/sass:src/css",
+    "sass:watch": "start sass --watch src/sass/main.scss:src/css/main.css",
+    "start": "start node server.js & start http://127.0.0.1:80 & exit"
   },
   "author": "jingks",
   "license": "ISC",
