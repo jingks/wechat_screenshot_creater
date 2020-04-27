@@ -28,7 +28,7 @@
                 
                 //long text
                 .long-text, .short-text {
-                    width: $sw * 0.74;
+                    width: $sw * 0.78;
                     margin-top: 6px;
                 }
 
@@ -56,12 +56,17 @@
                         font-size: $font-size * 0.9;
                         width: $sw * 0.6;
                         float: left;
-                        display: -webkit-box;
+                        height: $icon-size * 2.4;
+                        /*display: -webkit-box;
                         -webkit-box-orient: vertical;
-                        -webkit-line-clamp: 2;
+                        -webkit-line-clamp: 2;*/
                         overflow: hidden;
                         margin: 4px 0;
                         transform: scale(0.95);
+                    }
+                    //one content
+                    .one-content {
+                        line-height: $icon-size * 2.4;
                     }
                 }
 

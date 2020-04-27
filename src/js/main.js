@@ -179,8 +179,11 @@ function pic2b64(obj, type, val = 0) {
 }
 
 function change_text(txt) {
+    if(txt.length > 15) {
+        short_txt = txt.slice(0, 15) + '...';
+    }
     for(i = 1; i <= 3; i++) {
-        document.querySelector('.article' + i + ' .article-right .short-text').innerHTML = txt;
+        document.querySelector('.article' + i + ' .article-right .short-text').innerHTML = short_txt;
         document.querySelector('.article' + i + ' .article-right .long-text').innerHTML = txt;
     }
 }
@@ -204,6 +207,15 @@ function change_pic_content_pic(b64) {
 }
 
 function change_pic_content_text(txt) {
+    if(txt.length <= 14) {
+        //one-content
+        for(i = 1; i <= 3; i++) {
+            document.querySelector('.article' + i + ' .article-right .content').classList.add('one-content');
+        }
+    }
+    else if(txt.length >= 27) {
+        txt = txt.slice(0, 26) + '...';
+    }
     for(i = 1; i <= 3; i++) {
         document.querySelector('.article' + i + ' .article-right .content').innerHTML = txt;
     }
